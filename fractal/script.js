@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d");
 function drawTree(startX, startY, len, angle, branchWidth, color1, color2){
     ctx.beginPath();
     ctx.save();
-    ctx.strokeColor = color1;
+    ctx.strokeStyle = color1;
     ctx.fillStyle = color2;
     ctx.lineWidth = branchWidth;
     ctx.translate(startX, startY);
@@ -16,15 +16,15 @@ function drawTree(startX, startY, len, angle, branchWidth, color1, color2){
     ctx.lineTo(0, -len);
     ctx.stroke();
 
-    if(len<10) {
+    if(len < 10) {
         ctx.restore();
         return;
     }
 
-    drawTree(0, -len * 0.75, angle + 5, branchWidth);
-    drawTree(0, -len * 0.75, angle - 5, branchWidth);
+    drawTree(0, -len, len * 0.75, angle - 5, branchWidth);
+    drawTree(0, -len, len * 0.75, angle + 5, branchWidth);
 
-    ctx.restore;
+    ctx.restore();
 }
 
-drawTree(canvas.width/2, canvas.height - 80, 120, 0, 2, "brown", "green");
+drawTree(canvas.width/2, canvas.height - 80, 120, 0, 3, "brown", "green");
