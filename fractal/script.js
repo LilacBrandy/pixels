@@ -1,5 +1,5 @@
 const canvas = document.querySelector("canvas");
-const generateButton = document.querySelector("generate-tree-button");
+const generateButton = document.querySelector(".generate-tree-button");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const ctx = canvas.getContext("2d");
@@ -10,8 +10,8 @@ function drawTree(startX, startY, len, angle, branchWidth, color1, color2){
     ctx.strokeColor = color1;
     ctx.fillStyle = color2;
     ctx.lineWidth = branchWidth;
-    canvas.translate(startX, startY);
-    canvas.rotate(angle * Math.PI/180);
+    ctx.translate(startX, startY);
+    ctx.rotate(angle * Math.PI/180);
     ctx.moveTo(0, 0);
     ctx.lineTo(0, -len);
     ctx.stroke();
