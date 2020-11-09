@@ -21,8 +21,8 @@ function drawTree(startX, startY, len, angle, branchWidth, color1, color2){
         return;
     }
 
-    drawTree(0, -len, len * 0.75, angle - 5, branchWidth);
-    drawTree(0, -len, len * 0.75, angle + 5, branchWidth);
+    drawTree(0, -len, len * 0.77, angle - 15, branchWidth);
+    drawTree(0, -len, len * 0.77, angle + 15, branchWidth);
 
     ctx.restore();
 }
