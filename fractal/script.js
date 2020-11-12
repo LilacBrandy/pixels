@@ -12,7 +12,7 @@ function drawTree(startX, startY, len, angle, branchWidth, color1, color2){
     ctx.strokeStyle = color1;
     ctx.fillStyle = color2;
     ctx.shadowBlur = 3;
-    ctx.shadowColor = "green"
+    ctx.shadowColor = "blue"
     ctx.lineWidth = branchWidth;
     ctx.translate(startX, startY);
     ctx.rotate(angle * Math.PI/180);
